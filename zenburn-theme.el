@@ -110,10 +110,10 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(default ((t (:foreground ,zenburn-fg :background ,zenburn-bg))))
    `(cursor ((t (:foreground ,zenburn-fg :background ,zenburn-fg+1))))
    `(escape-glyph ((t (:foreground ,zenburn-yellow :weight bold))))
-   `(fringe ((t (:foreground ,zenburn-fg :background ,zenburn-bg+1))))
+   `(fringe ((t (:foreground ,zenburn-bg :background ,zenburn-bg))))
    `(header-line ((t (:foreground ,zenburn-yellow
                                   :background ,zenburn-bg-1
-                                  :box (:line-width -1 :style released-button)))))
+                                  :box nil))))
    `(highlight ((t (:background ,zenburn-bg-05))))
    `(success ((t (:foreground ,zenburn-green :weight bold))))
    `(warning ((t (:foreground ,zenburn-orange :weight bold))))
@@ -153,18 +153,18 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(mode-line
      ((,class (:foreground ,zenburn-green+1
                            :background ,zenburn-bg-1
-                           :box (:line-width -1 :style released-button)))
+                           :box nil))
       (t :inverse-video t)))
    `(mode-line-buffer-id ((t (:foreground ,zenburn-yellow :weight bold))))
    `(mode-line-inactive
      ((t (:foreground ,zenburn-green-1
                       :background ,zenburn-bg-05
-                      :box (:line-width -1 :style released-button)))))
+                      :box nil))))
    `(region ((,class (:background ,zenburn-bg-1))
              (t :inverse-video t)))
    `(secondary-selection ((t (:background ,zenburn-bg+2))))
    `(trailing-whitespace ((t (:background ,zenburn-red))))
-   `(vertical-border ((t (:foreground ,zenburn-fg))))
+   `(vertical-border ((t (:foreground ,zenburn-bg+1))))
 ;;;;; font lock
    `(font-lock-builtin-face ((t (:foreground ,zenburn-fg :weight bold))))
    `(font-lock-comment-face ((t (:foreground ,zenburn-green))))
@@ -626,7 +626,7 @@ Also bind `class' to ((class color) (min-colors 89))."
                       :background ,zenburn-bg-1
                       :underline nil
                       :weight bold
-                      :box (:line-width -1 :style released-button)))))
+                      :box nil))))
    `(helm-selection ((t (:background ,zenburn-bg+1 :underline nil))))
    `(helm-selection-line ((t (:background ,zenburn-bg+1))))
    `(helm-visible-mark ((t (:foreground ,zenburn-bg :background ,zenburn-yellow-2))))
